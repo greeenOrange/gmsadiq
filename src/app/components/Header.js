@@ -22,7 +22,7 @@ const Header = () => {
     
 
     return (
-        <header className={`fixed top-0 w-full z-50 ${scrollY || mobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent'}`}>
+        <header className={`sticky top-0 top-0 w-full z-50 ${scrollY || mobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent'}`}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
@@ -41,7 +41,7 @@ const Header = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 items-center">
                     <div className="relative">
-                        <a className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                        <a href='#' className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                             About
 
                         </a>
