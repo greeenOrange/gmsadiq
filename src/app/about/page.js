@@ -1,8 +1,9 @@
+"use client"
 import React from 'react'
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <section className="w-full">
+    <section className="w-full ">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <defs>
           <linearGradient id="text-gradient" x1="0" y1="0" x2="100%" y2="0">
@@ -32,8 +33,9 @@ const About = () => {
           I build awesome and latest website having strong command on any design
         </text>
       </svg>
-      <div className="h-64 md:h-96 w-full bg-white bg-cover bg-center" style={{ backgroundImage: "url('https://greeenorange.github.io/Portfolio-website/images/alom.png')" }}>
+      <div className="min-h-svh w-full bg-white relative bg-cover bg-topp bg-no-repeat bg-fixed" style={{ backgroundImage: "url('https://greeenorange.github.io/Portfolio-website/images/alom.png')" }}>
       </div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt temporibus maiores reprehenderit numquam enim nemo perspiciatis nostrum cumque aspernatur id deleniti iure, repellendus, debitis doloribus inventore. Reiciendis nemo ducimus aspernatur?</p>
     </section>
   )
 }
