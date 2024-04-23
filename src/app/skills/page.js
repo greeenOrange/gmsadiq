@@ -41,8 +41,8 @@ const Skills = () => {
     return (
         <section className="py-8">
             <div className="container mx-auto">
-                <h6 className="text-center">SKILLS</h6>
-                <h2 className="pt-4 pb-14 text-center uppercase font-semibold text-2xl">MY <span className="text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text leading-snug">ADVANTAGE</span></h2>
+                <h6 className="text-center text-sm">SKILLS</h6>
+                <h2 className="pt-4 pb-14 text-center uppercase font-semibold text-4xl">MY <span className="text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text leading-snug">ADVANTAGE</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     {skills.map((skill) => (
                         <div key={skill.id} >
