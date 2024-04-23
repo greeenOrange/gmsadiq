@@ -64,7 +64,6 @@ const Works = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">Professional Tab Menu</h1>
         <div>
       <div className="flex justify-center mb-8">
         <div className="flex space-x-4">
