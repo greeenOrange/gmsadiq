@@ -18,9 +18,9 @@ export default async function handler(req, res) {
 
   try {
     await transporter.sendMail({
-      from: 'Your Name <your_email@example.com>',
-      to: 'sadiqsrx@gmail.com', // Admin email address
-      subject: subject,
+      from: 'gmsadiq <sadiqsrx@gmail.com>',
+      to: 'gm1sadiq@gmail.com', // Admin email address
+      subject: 'Sending Email using Node.js',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
