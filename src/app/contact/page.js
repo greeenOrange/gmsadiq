@@ -27,7 +27,7 @@ const Contact = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('https://gmsadiq-d4zeihov3-greeenoranges-projects.vercel.app/api/sendEmail', {
+      const response = await fetch('/api/sendEmail', {
         
         method: 'POST',
         headers: {
