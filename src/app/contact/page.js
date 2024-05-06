@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GoDotFill } from "react-icons/go";
+
 const Contact = () => {
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    mail: '',
     subject: '',
     message: '',
   });
@@ -15,7 +16,6 @@ const Contact = () => {
     e.preventDefault();
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const handleSubmit = async (e) => {
@@ -30,11 +30,12 @@ const Contact = () => {
         body: JSON.stringify(formData),
       }
     );
+ 
     if (response.ok) {
       alert('Email sent successfully!');
         setFormData({
           name: '',
-          email: '',
+          mail: '',
           subject: '',
           message: '',
         });
@@ -82,8 +83,8 @@ const Contact = () => {
         <input
           type="email"
           id="email"
-          name="email"
-          value={formData.email}
+          name="mail"
+          value={formData.mail}
           onChange={handleChange}
           required
           className="p-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
