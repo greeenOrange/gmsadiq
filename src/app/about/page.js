@@ -27,7 +27,7 @@ const About = () => {
           Bangladesh
         </text>
         <text x="50%" y="80%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="18">
-          {`I'm a React Developer`}
+        {"I'm a React Developer"}
         </text>
         <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="16">
           I build awesome and latest website having strong command on any design
