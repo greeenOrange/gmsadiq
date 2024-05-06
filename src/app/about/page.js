@@ -26,10 +26,10 @@ const About = () => {
         <text x="54.3%" y="70%" dominantBaseline="middle" textAnchor="middle"fill="url(#text-gradient)" fontSize="26" font-family="Arial" font-weight="bold" mask="url(#text-mask)">
           Bangladesh
         </text>
-        <text x="50%" y="80%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="20">
-          I'm a React Developer.
+        <text x="50%" y="80%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="18">
+          {`I'm a React Developer`}
         </text>
-        <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="20">
+        <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="black" fontSize="16">
           I build awesome and latest website having strong command on any design
         </text>
       </svg>

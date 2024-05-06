@@ -12,6 +12,10 @@ const Contact = () => {
     message: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -20,6 +24,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
     try {
       const response = await fetch('/api/sendEmail', {
         
@@ -29,9 +35,11 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       }
+      
     );
  
     if (response.ok) {
+      setSuccess(true);
       alert('Email sent successfully!');
         setFormData({
           name: '',
@@ -43,9 +51,10 @@ const Contact = () => {
         alert('Failed to send email. Please try again later.');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
+      setError('Failed to send email');
       alert('An error occurred. Please try again later.');
     }
+    setLoading(false);
   };
 
   return (
@@ -114,7 +123,7 @@ const Contact = () => {
           className="p-3 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
         ></textarea>
       </div>
-      <button type="submit" className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+      <button type="submit" className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">{loading ? 'Sending...' : 'Send'}</button>
     </form>
       </div>
     </section>

@@ -1,10 +1,11 @@
 "use client"
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Works = () => {
     const tabs = [
-        { id: 'tab1', label: 'All', technology: "HTML,CSS,ReactJs,NextJs,Wodpress,Elementor,PHP, TwilwindCSS,Boostrap", name: 'define1', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg", 
+        { id: 'tab1', label: 'All', technology: "HTML,CSS,ReactJs,NextJs,Wodpress,Elementor,PHP, TwilwindCSS,Boostrap", name: 'define1', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg", 
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
@@ -12,7 +13,7 @@ const Works = () => {
             { src: '/images/image4.jpg', alt: 'Image 4', overlayText: 'Image 4' }
           ]
      },
-        { id: 'tab2', label: 'HTML/CSS', technology: "HTML,CSS, TwilwindCSS,Boostrap,", name: 'define2', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
+        { id: 'tab2', label: 'HTML/CSS', technology: "HTML,CSS, TwilwindCSS,Boostrap,", name: 'define2', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
@@ -20,28 +21,28 @@ const Works = () => {
             { src: '/images/image4.jpg', alt: 'Image 4', overlayText: 'Image 4' }
           ]
          },
-        { id: 'tab3', label: 'ReactJs', technology: "ReactJs,Boostrap,", name: 'define3', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
+        { id: 'tab3', label: 'ReactJs', technology: "ReactJs,Boostrap,", name: 'define3', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
             { src: '/images/image3.jpg', alt: 'Image 3', overlayText: 'Image 3' },
             { src: '/images/image4.jpg', alt: 'Image 4', overlayText: 'Image 4' }
           ] },
-        { id: 'tab4', label: 'NextJS', technology: "NextJs,TwilwindCSS", name: 'define4', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
+        { id: 'tab4', label: 'NextJS', technology: "NextJs,TwilwindCSS", name: 'define4', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
             { src: '/images/image3.jpg', alt: 'Image 3', overlayText: 'Image 3' },
             { src: '/images/image4.jpg', alt: 'Image 4', overlayText: 'Image 4' }
           ] },
-        { id: 'tab5', label: 'Wordpress', technology: "Wodpress,Elementor", name: 'define5', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
+        { id: 'tab5', label: 'Wordpress', technology: "Wodpress,Elementor", name: 'define5', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
             { src: '/images/image3.jpg', alt: 'Image 3', overlayText: 'Image 3' },
             { src: '/images/image4.jpg', alt: 'Image 4', overlayText: 'Image 4' }
           ] },
-        { id: 'tab6', label: 'PHP', technology: "PHP,TwilwindCSS", name: 'define6', img:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
+        { id: 'tab6', label: 'PHP', technology: "PHP,TwilwindCSS", name: 'define6', images:"https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp",
         content: [
             { src: 'https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-4.jp', alt: 'Image 1', overlayText: 'Image 1' },
             { src: '/images/image2.jpg', alt: 'Image 2', overlayText: 'Image 2' },
@@ -89,7 +90,13 @@ const Works = () => {
             // tab.map((pd, index) => (
               <div key={index} className="relative">
                 <p>{tab.technology}</p>
-                <img src={tab.img} className="w-full h-auto rounded-md" />
+                <Image 
+                src={tab?.im}
+                width={500}
+                height={500}
+                className="w-full h-auto rounded-md" 
+                alt="Picture of projects"
+                />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-md">
                   <p className="text-white text-lg font-bold">{tab.name}</p>
                 </div>
