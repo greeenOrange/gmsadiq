@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
@@ -19,14 +20,18 @@ const Header = () => {
         };
     }, []);
 
-    
+
 
     return (
         <header className={`sticky top-0 top-0 w-full z-50 ${scrollY || mobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent'}`}>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
-                        <span className="">gmsadiq</span>
+                        <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"
+                        alt='gmsadiq logo'
+                            width={100}
+                            height={100} 
+                            /></span>
                     </a>
                 </div>
                 <div className="flex lg:hidden ">
@@ -55,11 +60,11 @@ const Header = () => {
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                         Contact
                     </a>
-                    
+
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
-                       Download Resume
+                    <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
+                        Download Resume
                     </button>
 
                     <button type='button'>
@@ -114,9 +119,9 @@ const Header = () => {
                                     </a>
                                 </div>
                                 <div className="py-6">
-                                <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
-                       Download Resume
-                    </button>
+                                    <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
+                                        Download Resume
+                                    </button>
                                 </div>
                             </div>
                         </div>
