@@ -1,4 +1,4 @@
-[`gmsadiq`](https://gmsadiq.netlify.app/).
+## Live [`gmsadiq`](https://gmsadiq.netlify.app/).
 
 # Portfolio Website with Next.js
 
@@ -9,8 +9,6 @@ This is a professional portfolio website developed using Next.js, incorporating 
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation and Setup](#installation-and-setup)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
