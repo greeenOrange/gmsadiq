@@ -77,23 +77,40 @@ const Works = () => {
           ))}
         </div>
       </div>
+      
       <div className="grid grid-cols-3 gap-4">
       {filteredProjects.map((project, index) =>
-            // tab.map((pd, index) => (
-              <div key={index} className="relative">
-                <p>{project?.technology}</p>
-                <Image 
-                src={project?.images}
-                width={500}
-                height={500}
-                className="w-full h-auto rounded-md" 
-                alt="Picture of projects"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-md">
-                  <p className="text-white text-lg font-bold">{project?.name}</p>
-                </div>
-              </div>
-            // ))
+                 <motion.div 
+                 key={index} 
+                 className="relative"
+                 whileHover={{ scale: 1.05 }}
+               >
+                 <motion.img 
+                   src={project?.images}
+                   width={500}
+                   height={800}
+                   className="w-full h-auto rounded-md" 
+                   alt="Picture of projects"
+                   initial={{ opacity: 0, scale: 0.9 }}
+                   animate={{ opacity: 1, scale: 1 }}
+                   transition={{ duration: 0.3 }} 
+                 />
+                 <motion.div 
+                   className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 rounded-md"
+                   initial={{ opacity: 0 }}
+                   animate={{ opacity: 0 }}
+                   whileHover={{ opacity: 1 }}
+                   transition={{ duration: 0.3 }} 
+                 >
+                   <a href={project?.livelink}>Live</a>
+                   <hr className="w-80 border-t-2 border-white my-2" /> 
+                   <div className="flex">
+                      <a className="me-1 transform translate-x-0 transition-transform duration-600 ease-out" href={project?.frontend}>frontend </a>
+                      <p className='border-r-2 border-white'></p>
+                      <a className="ms-1" href={project?.backend}>backend</a>
+                   </div>
+                 </motion.div>
+               </motion.div>
           )}
       </div>
     </div>
