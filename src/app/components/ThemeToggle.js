@@ -5,6 +5,7 @@ import { FaRegMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+  console.log(theme);
   return (
     <button
     className={`${

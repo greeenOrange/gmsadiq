@@ -23,8 +23,8 @@ const Header = () => {
 
 
     return (
-        <header className={`sticky top-0 top-0 w-full z-50 ${scrollY || mobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent'}`}>
-            <nav className={`bg-${theme === 'light' ? 'white' : 'black'} mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6}`} aria-label="Global">
+        <header className={`sticky top-0 top-0 w-full z-50 ${(scrollY || mobileMenuOpen) && (theme === 'bg-white') ? 'bg-white shadow-md py-2' : 'dark:bg-slate-800'}`}>
+            <nav className={`mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6}`} aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"

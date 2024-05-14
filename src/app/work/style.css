@@ -1,4 +1,4 @@
-/* .main_card .text_live {
+.main_card .text_live {
     opacity: 0;
     transform: translate3d(0, 15px, -135px);
     transition: .6s transform cubic-bezier(.165,.84,.44,1), .6s opacity cubic-bezier(.165,.84,.44,1)
@@ -17,4 +17,4 @@
     opacity: 1;
     transform: translate3d(0, 0, -135px);
     transition: .6s transform cubic-bezier(.165,.84,.44,1), .6s opacity cubic-bezier(.165,.84,.44,1)
-} */
+}
