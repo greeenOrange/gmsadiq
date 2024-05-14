@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTheme } from '../context/themeContext';
+import { IoMdSunny } from "react-icons/io";
+import { FaRegMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
-
   return (
     <button
     className={`${
@@ -11,8 +12,8 @@ const ThemeToggle = () => {
     } px-4 py-2 rounded`}
     onClick={toggleTheme}
   >
-    {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-  </button>
+    {theme === 'light' ? <IoMdSunny /> : < FaRegMoon />}
+    </button>
   );
 };
 
