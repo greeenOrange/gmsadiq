@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 import Image from 'next/image';
+import "./style.css"
 
 const Works = () => {
     const projects = [
@@ -67,23 +68,30 @@ const Works = () => {
               key={index}
               className={`px-4 py-2 rounded-md focus:outline-none ${
                 activeTab === technology
-                  ? 'bg-blue-500 text-white shadow-md'
+                  ? 'selected bg-blue-500 text-white shadow-md'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-200'
               }`}
               onClick={() => handleTabClick(technology)}
             >
               {technology}
+              {technology === activeTab ? (
+                <motion.div className="underline" layoutId="underline" />
+              ) : null}
             </button>
           ))}
         </div>
       </div>
       
       <div className="grid grid-cols-3 gap-4">
+      <AnimatePresence mode="wait">
       {filteredProjects.map((project, index) =>
                  <motion.div 
                  key={index} 
-                 className="relative"
-                 whileHover={{ scale: 1.05 }}
+                 className="relative main_card"
+                 initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
                >
                  <motion.img 
                    src={project?.images}
@@ -102,16 +110,19 @@ const Works = () => {
                    whileHover={{ opacity: 1 }}
                    transition={{ duration: 0.3 }} 
                  >
-                   <a href={project?.livelink}>Live</a>
+                   <a
+                   className="text_live hover:text-white cursor-pointer"
+                    href={project?.livelink}>Live</a>
                    <hr className="w-80 border-t-2 border-white my-2" /> 
                    <div className="flex">
-                      <a className="me-1 transform translate-x-0 transition-transform duration-600 ease-out" href={project?.frontend}>frontend </a>
+                      <a className="text_group me-1 hover:text-white cursor-pointer" href={project?.frontend}>frontend </a>
                       <p className='border-r-2 border-white'></p>
-                      <a className="ms-1" href={project?.backend}>backend</a>
+                      <a className="text_group ms-1 hover:text-white cursor-pointer" href={project?.backend}>backend</a>
                    </div>
                  </motion.div>
                </motion.div>
           )}
+          </AnimatePresence>
       </div>
     </div>
       </div>

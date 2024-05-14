@@ -3,13 +3,13 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoMdSunny } from "react-icons/io";
-import { FaRegMoon } from "react-icons/fa";
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../context/themeContext';
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+    const { theme } = useTheme();
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <header className={`sticky top-0 top-0 w-full z-50 ${scrollY || mobileMenuOpen ? 'bg-white shadow-md py-2' : 'bg-transparent'}`}>
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6" aria-label="Global">
+            <nav className={`bg-${theme === 'light' ? 'white' : 'black'} mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6}`} aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"
@@ -66,14 +66,7 @@ const Header = () => {
                     <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
                         Download Resume
                     </button>
-
-                    <button type='button'>
-                        <IoMdSunny />
-                    </button>
-                    <button type='button'>
-                        <FaRegMoon />
-                    </button>
-
+                    <ThemeToggle />
                 </div>
             </nav>
 

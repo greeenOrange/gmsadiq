@@ -22,6 +22,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
 /* .mobile_menus{
   display: none;
 } */
