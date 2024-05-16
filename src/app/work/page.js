@@ -43,7 +43,7 @@ const Works = () => {
       const tabs = ['ReactJS', 'PHP', 'WordPress', 'Other'];
 
   return (
-    <section className="py-16">
+    <section id='work' className="py-16">
          <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const Works = () => {
       <div className="container mx-auto py-8">
         <div>
       <div className="flex justify-center mb-8">
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 justify-center flex-wrap gap-y-4">
         <button
               className={`px-4 py-2 rounded-md focus:outline-none ${
                 activeTab === "All"
@@ -82,7 +82,7 @@ const Works = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
       <AnimatePresence mode="wait">
       {filteredProjects.map((project, index) =>
                  <motion.div 

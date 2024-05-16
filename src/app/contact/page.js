@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-8">
+    <section id='contact' className="py-8">
       <div className="container mx-auto">
         <div className="flex gap-2 items-center justify-center">
         <h2 className="text-4xl font-semibold text-center">
@@ -76,13 +76,13 @@ const Contact = () => {
           />
         </div>
         <p className="text-center py-4 mb-8">Don’t need be Shy, Write to me</p>
-        <div className="flex items-center justify-between gap-8">
+        <div className="md:flex items-center justify-between gap-8">
           <p className="bg-[#f0ffc8] px-4 py-2 rounded-full flex items-center justify-center gap-1">
           <SlEnvolope />
             gm1sadiq@gmail.com
             </p>
           <motion.div
-            className="bottom-4 right-4"
+            className="bottom-4 right-4 text-center"
             animate={{ y: [-10, 0, -10], transition: { repeat: Infinity, duration: 1 } }}
           >
             <GoDotFill className="bg-black rounded-full" />

@@ -4,12 +4,31 @@ import React, { useEffect, useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import ThemeToggle from './ThemeToggle';
+import { motion } from "framer-motion";
 import { useTheme } from '../context/themeContext';
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { theme } = useTheme();
+
+    const variants = {
+        open: {
+          transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+        },
+        closed: {
+          transition: { staggerChildren: 0.05, staggerDirection: -1 }
+        }}
+        const Path = (
+            <motion.path
+              fill="transparent"
+              strokeWidth="3"
+              stroke="hsl(0, 0%, 18%)"
+              strokeLinecap="round"
+              
+            />
+          );
+
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -23,8 +42,12 @@ const Header = () => {
 
 
     return (
-        <header className={`sticky top-0 top-0 w-full z-50 ${(scrollY || mobileMenuOpen) && (theme === 'bg-white') ? 'bg-white shadow-md py-2' : 'dark:bg-slate-800'}`}>
-            <nav className={`mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6}`} aria-label="Global">
+        <header className={`sticky top-0 top-0 w-full z-50 ${(scrollY || mobileMenuOpen) && (theme === 'light') ? 'bg-white shadow-md py-2' : 'dark:bg-slate-800'}`}>
+            <motion.nav 
+            className={`mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6}`} 
+            aria-label="Global"
+            variants={variants}
+            >
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"
@@ -46,7 +69,7 @@ const Header = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 items-center">
                     <div className="relative">
-                        <a href='#' className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                        <a href='about' className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                             About
 
                         </a>
@@ -54,10 +77,10 @@ const Header = () => {
 
                     </div>
 
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    <a href="work" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                         Work
                     </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    <a href="contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                         Contact
                     </a>
 
@@ -68,7 +91,7 @@ const Header = () => {
                     </button>
                     <ThemeToggle />
                 </div>
-            </nav>
+            </motion.nav>
 
             {mobileMenuOpen && (
                 <div className="lg:hidden items-center">
