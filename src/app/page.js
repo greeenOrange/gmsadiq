@@ -1,10 +1,10 @@
+"use client"
 import Image from "next/image";
 import Banner from "./components/Banner";
 import About from "./about/page";
 import Skills from "./skills/page";
 import Works from "./work/page";
 import Contact from "./contact/page";
-
 
 export default function Home() {
   return (
