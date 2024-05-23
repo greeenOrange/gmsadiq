@@ -47,16 +47,6 @@ const Works = () => {
           <div>
             <div className="flex justify-center mb-8">
               <div className="flex space-x-4 justify-center flex-wrap gap-y-4">
-                {/* <button
-                  className={`px-4 py-2 rounded-md focus:outline-none ${
-                    activeTab === "All"
-                      ? "bg-blue-500 text-white shadow-md"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-200"
-                  }`}
-                  onClick={() => handleTabClick("All")}
-                >
-                  All
-                </button> */}
                 {tabs.map((tab, index) => (
                   <button
                     key={index}
