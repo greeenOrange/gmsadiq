@@ -112,7 +112,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-500 focus:border-black-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
+                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-300 focus:border-gray-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
               />
             </div>
             <div className="mb-4">
@@ -129,7 +129,7 @@ const Contact = () => {
                 value={formData.mail}
                 onChange={handleChange}
                 required
-                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-500 focus:border-black-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
+                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-300 focus:border-gray-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
               />
             </div>
           </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-500 focus:border-black-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
+                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-300 focus:border-gray-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
               />
             </div>
             <div className="mb-4">
@@ -164,7 +164,7 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-500 focus:border-black-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
+                className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-300 focus:border-gray-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows="5"
-              className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-500 focus:border-black-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none text-sm"
+              className="block mt-1 appearance-none bg-transparent border-b-2 border-gray-300 focus:border-gray-500 font-bold  w-full text-black-700 py-3 px-2 leading-tight focus:outline-none text-sm"
             ></textarea>
           </div>
           <button
