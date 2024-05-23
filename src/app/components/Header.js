@@ -1,6 +1,8 @@
 "use client"
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
 import ThemeToggle from './ThemeToggle';
@@ -10,6 +12,7 @@ import { useTheme } from '../context/themeContext';
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
     const { theme } = useTheme();
 
     const variants = {
@@ -49,13 +52,13 @@ const Header = () => {
             variants={variants}
             >
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <Link href="/" className="-m-1.5 p-1.5">
                         <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"
                         alt='gmsadiq logo'
                             width={100}
                             height={100} 
                             /></span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden ">
                     <button
@@ -69,17 +72,17 @@ const Header = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 items-center">
                     <div className="relative">
-                        <a href='about' className="flex items-center gap-x-1 text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                        <Link href='about' className={`link ${pathname === '/about' ? 'text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text' : 'text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text'}`}>
                             About
-                        </a>
+                        </Link>
                     </div>
 
-                    <a href="work" className="text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    <Link href="work" className={`link ${pathname === '/work' ? 'text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text' : 'text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text'}`}>
                         Work
-                    </a>
-                    <a href="contact" className="text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    </Link>
+                    <Link href="contact" className={`link ${pathname === '/contact' ? 'text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text' : 'text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text'}`}>
                         Contact
-                    </a>
+                    </Link>
 
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -95,9 +98,9 @@ const Header = () => {
                     <div className="fixed inset-0 z-10" />
                     <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <Link href="#" className="-m-1.5 p-1.5">
                                 <span className="">gmsadiq</span>
-                            </a>
+                            </Link>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -112,24 +115,24 @@ const Header = () => {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
 
-                                    <a
+                                    <Link
                                         href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         About
-                                    </a>
-                                    <a
+                                    </Link>
+                                    <Link
                                         href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Work
-                                    </a>
-                                    <a
+                                    </Link>
+                                    <Link
                                         href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Contact
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="py-6">
                                     <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">

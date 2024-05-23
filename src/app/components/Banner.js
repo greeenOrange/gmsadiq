@@ -9,7 +9,6 @@ function Banner() {
         "Web Developer.",
         "Web Programmer",
         "Frontend Developer"
-
     ];
     const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
     const count = useMotionValue(0);
