@@ -69,18 +69,15 @@ const Header = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 items-center">
                     <div className="relative">
-                        <a href='about' className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                        <a href='about' className="flex items-center gap-x-1 text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                             About
-
                         </a>
-
-
                     </div>
 
-                    <a href="work" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    <a href="work" className="text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                         Work
                     </a>
-                    <a href="contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+                    <a href="contact" className="text-sm font-semibold leading-6  hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
                         Contact
                     </a>
 
@@ -117,19 +114,19 @@ const Header = () => {
 
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         About
                                     </a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Work
                                     </a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Contact
                                     </a>

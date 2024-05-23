@@ -38,7 +38,6 @@ h6 {
   align-items: center;
   position: relative;
   white-space: nowrap;
-  color: #101010;
   font-weight: 600;
 }
 .main_btn::before {

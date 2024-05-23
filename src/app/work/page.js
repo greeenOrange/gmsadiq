@@ -52,8 +52,8 @@ const Works = () => {
                     key={index}
                     className={`px-4 py-2 rounded-md focus:outline-none ${
                       activeTab === tab
-                        ? "bg-blue-500 text-white shadow-md"
-                        : "bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-200"
+                        ? "font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                        : "font-semibold leading-6 dark:text-gray-100 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text transition-all duration-200"
                     }`}
                     onClick={() => setActiveTab(tab)}
                   >
