@@ -116,19 +116,19 @@ const Header = () => {
                                 <div className="space-y-2 py-6">
 
                                     <Link
-                                        href="#"
+                                        href="about"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         About
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="work"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Work
                                     </Link>
                                     <Link
-                                        href="#"
+                                        href="contact"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50"
                                     >
                                         Contact
