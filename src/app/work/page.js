@@ -1,12 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import projects from "../data/project";
+import {projects} from "../data/project";
 import "./style.css";
 
 const Works = () => {
-
-
   const [activeTab, setActiveTab] = useState("All");
 
   const getFilteredProjects = () => {

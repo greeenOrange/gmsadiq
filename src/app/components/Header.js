@@ -53,11 +53,17 @@ const Header = () => {
             >
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
-                        <span className=""><Image src="https://i.ibb.co/9pX6YTC/favicon.webp"
+                        <span className="">
+                           {theme === 'light' ? <Image src="https://i.ibb.co/BcX6tQx/gmsadiqlogo.webp"
                         alt='gmsadiq logo'
                             width={100}
                             height={100} 
-                            /></span>
+                            /> : <Image src="https://i.ibb.co/HKZJjyS/gmsadiqlogodark.webp"
+                            alt='gmsadiq logo'
+                                width={100}
+                                height={100} 
+                                /> }
+                            </span>
                     </Link>
                 </div>
                 <div className="flex lg:hidden ">

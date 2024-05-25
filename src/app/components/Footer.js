@@ -76,9 +76,9 @@ const Footer = () => {
                 <span>+8801515649932</span>
               </p>
               <p className="flex items-center gap-2 text-md landing-6 dark:text-slate-900 text-white font-semibold">
-                <SlEnvolope size="50px" />
+                <SlEnvolope size="28px" />
                 <span>
-                  <Link href="mailto:gm1sadiq@gmail.com"></Link>
+                  <Link href="mailto:gm1sadiq@gmail.com">gm1sadiq@gmail.com</Link>
                 </span>
               </p>
             </div>
