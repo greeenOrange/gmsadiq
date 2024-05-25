@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {projects} from "../data/project";
+import {projects, tabs} from "../data/project";
 import "./style.css";
 
 const Works = () => {
@@ -11,7 +11,6 @@ const Works = () => {
     if (activeTab === "All") {
       return projects;
     }
-
     if (activeTab === "Other") {
       return projects.filter(
         (project) =>
@@ -19,20 +18,14 @@ const Works = () => {
             project.technology
               .map((t) => t.toLowerCase())
               .includes(tech.toLowerCase())
-          )
-      );
-    }
-
+          ))}
     return projects.filter((project) =>
       project.technology
         .map((t) => t.toLowerCase())
         .includes(activeTab.toLowerCase())
-    );
-  };
+    )};
 
   const filteredProjects = getFilteredProjects();
-
-  const tabs = ["All", "ReactJS", "PHP", "WordPress", "Other"];
 
   return (
     <section id="work" className="py-16">
@@ -104,7 +97,7 @@ const Works = () => {
                           className="text_group me-1 hover:text-white cursor-pointer"
                           href={project?.frontend}
                         >
-                          frontend{" "}
+                          frontend
                         </a>
                         <p className="border-r-2 border-white"></p>
                         <a

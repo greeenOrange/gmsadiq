@@ -77,7 +77,7 @@ const Contact = () => {
         </div>
         <p className="text-center py-4 mb-8">Don’t need be Shy, Write to me</p>
         <div className="md:flex items-center justify-between gap-8">
-          <p className="bg-[#f0ffc8] px-4 py-2 rounded-full flex items-center justify-center gap-1">
+          <p className="dark:bg-white bg-[#f0ffc8] px-4 py-2 rounded-full flex items-center justify-center gap-1 tracking-wide text-gray-700 text-base font-bold">
             <SlEnvolope />
             gm1sadiq@gmail.com
           </p>
@@ -90,7 +90,7 @@ const Contact = () => {
           >
             <GoDotFill className="bg-black rounded-full" />
           </motion.div>
-          <p className="bg-[#ffaeae] px-4 py-2 rounded-full flex items-center justify-center gap-1">
+          <p className="bg-[#ffaeae] px-4 py-2 rounded-full flex items-center justify-center gap-1  tracking-wide dark:text-gray-100 text-gray-700 text-base font-bold">
             <MdOutlinePhone />
             +8801515649932
           </p>

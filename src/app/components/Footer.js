@@ -87,7 +87,7 @@ const Footer = () => {
         <nav className="flex items-center justify-center gap-4">
           <div className="lg:flex lg:gap-x-12 items-center md:mb-4">
             <Link href="/about"
-                  className={`link ${
+                  className={`jusitfy-center ${
                     pathname === "/about"
                       ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                       : theme === "light"
@@ -100,7 +100,7 @@ const Footer = () => {
               </Link>
             <Link
               href="work"
-              className={`link ${
+              className={`jusitfy-center ${
                 pathname === "/work"
                 ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                 : theme === "light"
@@ -112,7 +112,7 @@ const Footer = () => {
             </Link>
             <Link
               href="contact"
-              className={`link ${
+              className={`jusitfy-center ${
                 pathname === "/contact"
                 ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                 : theme === "light"

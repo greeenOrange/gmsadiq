@@ -81,7 +81,7 @@ export const projects = [
     },
   ];
 
-
+  export const tabs = ["All", "ReactJS", "PHP", "WordPress", "Other"];
 
   export const skills = [
     { id: 1, title: 'JavaScript', description: 'Library base core knowlage', icons: <SiJavascript size={40} />, level: 68 },
