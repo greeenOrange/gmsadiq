@@ -34,7 +34,15 @@ export const projects = [
       frontend: "https://stellular-boba-dd261f.netlify.app/",
       client: "https://github.com/greeenOrange/daily_mall-e-commerce-",
       images:
-        "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
+        "https://i.ibb.co/zH5nXCZ/e-commerce.webp",
+    },
+    {
+      technology: ["reactjs", "css"],
+      name: "define3",
+      frontend: "https://stellular-boba-dd261f.netlify.app/",
+      client: "https://github.com/greeenOrange/daily_mall-e-commerce-",
+      images:
+        "https://i.ibb.co/DtBx5v6/ramanad-app.webp",
     },
     {
       technology: ["reactjs", "Boostrap"],
@@ -51,13 +59,21 @@ export const projects = [
       frontend: "https://todo-taskmanager-4a73e.netlify.app/",
       client: "https://github.com/greeenOrange/todo-task-manager",
       images:
-        "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
+        "https://i.ibb.co/Ssk4g8j/Task-Management-App.webp",
+    },
+    {
+      technology: ["reactjs", "Boostrap"],
+      name: "space rocket history",
+      frontend: "https://todo-taskmanager-4a73e.netlify.app/",
+      client: "https://github.com/greeenOrange/todo-task-manager",
+      images:
+        "https://i.ibb.co/3mgBZtB/rocket-space.webp",
     },
     {
       technology: ["Wordpress", "Elementor"],
       name: "define5",
       images:
-        "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg",
+        "https://i.ibb.co/VYsb93R/nazemit-lms.webp",
     },
     {
       technology: ["Wordpress", "Elementor"],
