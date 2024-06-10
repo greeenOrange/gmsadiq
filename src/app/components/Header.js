@@ -92,7 +92,7 @@ const Header = () => {
 
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <button type='button' className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded me-10">
+                    <button type='button' className="ppearance-none bg-transparent bg:text-white main_btn me-10 main_btn">
                         Download Resume
                     </button>
                     <ThemeToggle />
