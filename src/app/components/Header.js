@@ -42,8 +42,6 @@ const Header = () => {
         };
     }, []);
 
-
-
     return (
         <header className={`sticky top-0 top-0 w-full z-50 ${(scrollY || mobileMenuOpen) && (theme === 'light') ? 'bg-white shadow-md py-2' : 'dark:bg-slate-800'}`}>
             <motion.nav 

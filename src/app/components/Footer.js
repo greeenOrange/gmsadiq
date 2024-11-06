@@ -14,60 +14,70 @@ const Footer = () => {
 
   return (
     <footer
-      className={`py-3 ${
+      className={`lg:py-3 py-6 ${
         theme === "light" ? "bg-slate-800 shadow-md py-2" : "bg-white"
       }`}
     >
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex flex-col gap-y-5">
+      <div className="container mx-auto px-3">
+        <div className="md:flex items-center justify-between gap-4">
+          <div className="flex flex-col lg:gap-y-5 gap-y-3">
             <Link href="">
-              <Image src="" alt="" />
+              <span className="">
+                {theme === "light" ? (
+                  <Image
+                    src="https://i.ibb.co/HKZJjyS/gmsadiqlogodark.webp"
+                    alt="gmsadiq logo"
+                    width={120}
+                    height={120}
+                  />
+                ) : (
+                  <Image
+                    src="https://i.ibb.co/BcX6tQx/gmsadiqlogo.webp"
+                    alt="gmsadiq logo"
+                    width={120}
+                    height={120}
+                  />
+                )}
+              </span>
             </Link>
             <p className="tracking-widest dark:text-slate-900 text-white font-semibold">
               I Love to help business most like yours succeed online. From
               website design and development.
             </p>
-            <h6 className="text-3xl dark:text-slate-900 text-white font-semibold">
+            <h6 className="lg:text-3xl text-2xl lg:block hidden dark:text-slate-900 text-white font-semibold">
               <Link href="mailto:gm1sadiq@gmail.com leading-6">
                 gm1sadiq@gmail.com
               </Link>
             </h6>
           </div>
-          <div className="flex flex-col gap-y-5">
-            <div className="grid grid-cols-3 items-center justify-center gap-4 uppercase text-white dark:text-slate-900">
+          <div className="flex flex-col gap-y-5 items-center justify-center lg:mt-0 mt-5">
+            <div className="grid lg:grid-cols-3 grid-cols-4 lg:gap-4 gap-2 uppercase text-white dark:text-slate-900">
               <Link
                 href="https://www.facebook.com"
-                className="border border-solid dark:border-slate-900 border-slate-200 p-4 text-center font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                className="border border-solid dark:border-slate-900 border-slate-200 lg:p-4 px-2 lg:text-base text-xs text-center font-semibold lg:leading-6 leading-10 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               >
                 Facebook
               </Link>
               <Link
                 href="https://www.instagram.com"
-                className="border border-solid dark:border-slate-900 border-slate-200 p-4 text-center font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                className="border border-solid dark:border-slate-900 border-slate-200 lg:p-4 ps-px lg:text-base text-xs text-center font-semibold lg:leading-6 leading-10 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               >
                 Instagram
               </Link>
               <Link
                 href="https://www.linkedin.com"
-                className="border border-solid dark:border-slate-900 border-slate-200 p-4 text-center font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                className="border border-solid dark:border-slate-900 border-slate-200 lg:p-4 px-2 lg:text-base text-xs text-center font-semibold lg:leading-6 leading-10 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               >
                 linkedIn
               </Link>
               <Link
                 href="https://www.whatsapp.com"
-                className="border border-solid dark:border-slate-900 border-slate-200 p-4 text-center font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                className="border border-solid dark:border-slate-900 border-slate-200 lg:p-4 px-2 lg:text-base text-xs text-center font-semibold lg:leading-6 leading-10 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               >
                 whatsapp
               </Link>
-              <Link
-                href="https://x.com"
-                className="border border-solid dark:border-slate-900 border-slate-200 p-4 text-center font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
-              >
-                X
-              </Link>
             </div>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 items-center">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-8 lg:gap-y-3">
               <p className="flex items-center gap-2 text-md landing-6 dark:text-slate-900 text-white font-semibold">
                 <FaLocationDot size="40px" />
                 <span>pabna,Dhaka,Bangladesh</span>
@@ -88,7 +98,7 @@ const Footer = () => {
           </div>
         </div>
         <nav className="flex items-center justify-center gap-4">
-          <div className="lg:flex lg:gap-x-12 items-center md:mb-4">
+          <div className="flex lg:gap-x-12 gap-x-6 items-center md:mb-4">
             <Link
               href="/about"
               className={`jusitfy-center ${
@@ -129,7 +139,7 @@ const Footer = () => {
         </nav>
       </div>
       <p className="text-center dark:text-slate-900 text-white font-semibold leading-6 mt-6">
-         <AnimatedScrambleText text="Copyright @2020, gmsadiq All Right reserved" />
+        <AnimatedScrambleText text="Copyright @2020, gmsadiq All Right reserved" />
       </p>
     </footer>
   );
