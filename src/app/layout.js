@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { ThemeProvider } from "./context/themeContext";
 import Footer from "./components/Footer";
+import CustomCursor from './components/CustomCursor';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <ThemeProvider>
+        <CustomCursor />
       <Header />
       {children}
       <Footer />

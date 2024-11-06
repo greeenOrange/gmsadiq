@@ -2,18 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --cursor-color: rgb(193, 11, 111);
+}
+
+html.dark {
+  --cursor-color: #fff;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   --bg-color: white;
   background-color: var(--bg-color);
   color: #000;
 }
-
 body.dark {
   --bg-color: #0f172a;
   background-color: var(--bg-color);
   color: #fff;
 }
+
 
 h1,
 h2,
@@ -23,13 +31,14 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
-.cursor {
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
+
+.mask{
+  position: absolute;
+  mask-image: url('../../public/mask.svg');
+  background: #ff6b00;
+  mask-repeat: no-repeat;
+  text-align: center;
+  margin: 0 auto;
 }
 .main_btn {
   padding: 20px 0;
