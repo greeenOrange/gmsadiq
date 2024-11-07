@@ -121,7 +121,7 @@ const Header = () => {
         </div>
         <div className="left_menu_items lg:flex lg:flex-1 lg:justify-end justify-space-between">
           <a
-            href="https://drive.google.com/file/d/19Agsys9_88oqC0QAs9FO89cjDpX_QMZ0/view?usp=sharing"
+            href="https://drive.google.com/file/d/181ViOFwD6pFuFV_lugYHwV2e5U-05I21/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-block appearance-none bg-transparent bg:text-white main_btn me-10"
@@ -176,7 +176,7 @@ const Header = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="https://drive.google.com/file/d/19Agsys9_88oqC0QAs9FO89cjDpX_QMZ0/view?usp=sharing"
+                    href="https://drive.google.com/file/d/181ViOFwD6pFuFV_lugYHwV2e5U-05I21/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hidden lg:inline-block appearance-none bg-transparent bg:text-white main_btn me-10"
