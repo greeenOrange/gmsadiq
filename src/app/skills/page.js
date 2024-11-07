@@ -23,7 +23,7 @@ const Skills = () => {
     }, [controls, inView]);
 
     return (
-        <section id='skills' className="py-8">
+        <section id='skills' className="lg:py-8 py-0 lg:pt-14">
             <div className="container mx-auto">
                 <h6 className="text-center text-sm">SKILLS</h6>
                 <h2 className="pt-4 pb-14 text-center uppercase font-semibold text-4xl">MY <span className="text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text leading-snug">ADVANTAGE</span></h2>

@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-8 lg:gap-y-3">
               <p className="flex items-center gap-2 text-md landing-6 dark:text-slate-900 text-white font-semibold">
                 <FaLocationDot size="40px" />
-                <span>pabna,Dhaka,Bangladesh</span>
+                <span>Pabna,Dhaka,Bangladesh</span>
               </p>
               <p className="flex items-center gap-2 text-md landing-6 dark:text-slate-900 text-white font-semibold">
                 <MdOutlinePhone size="30px" />
@@ -97,16 +97,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <nav className="flex items-center justify-center gap-4">
-          <div className="flex lg:gap-x-12 gap-x-6 items-center md:mb-4">
+        <nav className="flex items-center justify-center gap-4 lg:mt-4 mt-6">
+          <div className="flex lg:gap-x-12 gap-x-6 items-center lg:mb-4 mb-6">
             <Link
               href="/about"
               className={`jusitfy-center ${
                 pathname === "/about"
-                  ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                   : theme === "light"
-                  ? "text-sm font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
-                  : "text-slate-900 text-sm font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  : "text-slate-900 lg:text-sm text-lg font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               }`}
             >
               About
@@ -115,10 +115,10 @@ const Footer = () => {
               href="work"
               className={`jusitfy-center ${
                 pathname === "/work"
-                  ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                   : theme === "light"
-                  ? "text-sm font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
-                  : "text-slate-900 text-sm font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  : "text-slate-900 lg:text-sm text-lg font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               }`}
             >
               Work
@@ -127,10 +127,10 @@ const Footer = () => {
               href="contact"
               className={`jusitfy-center ${
                 pathname === "/contact"
-                  ? "text-sm font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                   : theme === "light"
-                  ? "text-sm font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
-                  : "text-slate-900 text-sm font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  ? "lg:text-sm text-lg font-semibold leading-6 text-white hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
+                  : "text-slate-900 lg:text-sm text-lg font-semibold leading-6 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
               }`}
             >
               Contact
@@ -138,7 +138,7 @@ const Footer = () => {
           </div>
         </nav>
       </div>
-      <p className="text-center dark:text-slate-900 text-white font-semibold leading-6 mt-6">
+      <p className="text-center dark:text-slate-900 text-white font-semibold leading-6 mt-6 uppercase">
         <AnimatedScrambleText text="Copyright @2020, gmsadiq All Right reserved" />
       </p>
     </footer>

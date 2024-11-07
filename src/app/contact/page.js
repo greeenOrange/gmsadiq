@@ -61,7 +61,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-3">
         <div className="flex gap-2 items-center justify-center">
           <h2 className="text-4xl font-semibold text-center">
             <span className="inline text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text leading-snug">
@@ -100,7 +100,7 @@ const Contact = () => {
           <div className="flex items-center gap-4">
             <div className="mb-4">
               <label
-                for="name"
+                htmlFor="name"
                 className="block uppercase tracking-wide text-gray-700 text-base font-bold mb-2"
               >
                 Full Name
@@ -118,7 +118,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-base font-bold mb-2"
-                for="email"
+                htmlFor="email"
               >
                 Email
               </label>
@@ -137,7 +137,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-base font-bold mb-2"
-                for="mobile"
+                htmlFor="mobile"
               >
                 Phone
               </label>
@@ -153,7 +153,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-base font-bold mb-2"
-                for="subject"
+                htmlFor="subject"
               >
                 Subject
               </label>
@@ -171,7 +171,7 @@ const Contact = () => {
           <div className="mb-4">
             <label
               className="block uppercase tracking-wide text-gray-700 text-base font-bold mb-2"
-              for="message"
+              htmlFor="message"
             >
               Message
             </label>

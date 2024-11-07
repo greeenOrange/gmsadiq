@@ -42,7 +42,7 @@ function Banner() {
     }, [textIndex, texts, count, updatedThisRound, texts?.length]);
 
     return (
-        <div className="h-64 md:h-96 w-full bg-cover bg-center" style={{ backgroundImage: "url('https://greeenorange.github.io/Portfolio-website/images/hero-bg.svg')" }}>
+        <div className="h-svh md:h-96 w-full bg-cover bg-center relative" style={{ backgroundImage: "url('https://greeenorange.github.io/Portfolio-website/images/hero-bg.svg')" }}>
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                 <p className="text-lg md:text-xl text-dark dark:text-white mt-4 text-gray-900 font-bold">{"I'm gm sadiq"}</p>

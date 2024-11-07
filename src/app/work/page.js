@@ -37,11 +37,11 @@ const Works = () => {
         <div className="container mx-auto py-8">
           <div>
             <div className="flex justify-center mb-8">
-              <div className="flex space-x-4 justify-center flex-wrap gap-y-4">
+              <div className="flex space-x-4 justify-center flex-wrap lg:gap-y-4 gap-y-2">
                 {tabs.map((tab, index) => (
                   <button
                     key={index}
-                    className={`px-4 py-2 rounded-md focus:outline-none ${
+                    className={`lg:px-4 px-0.5 py-2 rounded-md focus:outline-none ${
                       activeTab === tab
                         ? "font-semibold leading-6 text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text"
                         : "font-semibold leading-6 dark:text-gray-100 hover:text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text transition-all duration-200"
