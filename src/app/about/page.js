@@ -3,8 +3,12 @@ import React from "react";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <section className="w-full ">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <section className="w-full">
+      <svg
+        className="hidden lg:block"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
         <defs>
           <linearGradient id="text-gradient" x1="0" y1="0" x2="100%" y2="0">
             <stop offset="0%" stopColor="#833ab4" />
@@ -83,20 +87,30 @@ const About = () => {
           fill="black"
           fontSize="14"
         >
-          {/* specializing in creating modern, high-quality websites with a strong */}
-          {/* focus on design precision.Bring extensive experience in WordPress */}
-          {/* theme development, ensuring each project is optimized, responsive, and */}
-          {/* tailored to meet client needs. */}
-          I build awesome and latest website having strong command on any design
+          build awesome and latest website having strong command on any design
         </text>
       </svg>
       <div
-        className="min-h-svh w-full bg-white relative bg-cover bg-topp bg-no-repeat bg-fixed"
+        className="relative min-h-dvh w-full bg-white bg-cover bg-top bg-fixed"
         style={{
           backgroundImage:
             "url('https://greeenorange.github.io/Portfolio-website/images/alom.png')",
         }}
-      ></div>
+      >
+        {/* Overlay for mobile screens */}
+        <div className="lg:hidden block lg:bg-black/40 backdrop-blur-sm absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white p-4">
+            <h1 className="text-lg font-bold text-2xl md:text-3xl">
+              specializing in creating modern, high-quality websites with a
+              strong focus on design precision.Ensuring each project is
+              optimized, responsive, and
+            </h1>
+            <p className="mt-2 font-bold text-sm text-base md:text-lg inline uppercase text-transparent bg-gradient-to-r from-purple-600 via-red-600 to-yellow-400 bg-clip-text">
+              tailored to meet client needs
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

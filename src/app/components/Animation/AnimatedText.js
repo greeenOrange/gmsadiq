@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const characters = "abcdefghijklmnopqrstuvwxyz-.,+*!?@&%/="; // Characters for scramble effect
+const characters = "acdefhisjklmuvyz-.,*!?@&%/="; // Characters for scramble effect
 const scrambleSpeed = 50; // milliseconds between character changes
 const holdDuration = 2000;
 export default function AnimatedScrambleText({ text }) {
