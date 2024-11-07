@@ -24,8 +24,8 @@ const About = () => {
               textAnchor="middle"
               fill="url(#text-gradient)"
               fontSize="24"
-              font-family="Arial"
-              font-weight="bold"
+              fontFamily="Arial"
+              fontWeight="bold"
             >
               Based in Bangladesh
             </text>
@@ -33,7 +33,7 @@ const About = () => {
         </defs>
         <path
           fill="#f3f4f5"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,117.3C672,96,768,96,864,117.3C960,139,1056,181,1152,202.7C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
         <text
@@ -63,8 +63,8 @@ const About = () => {
           textAnchor="middle"
           fill="url(#text-gradient)"
           fontSize="26"
-          font-family="Arial"
-          font-weight="bold"
+          fontFamily="Arial"
+          fontWeight="bold"
           mask="url(#text-mask)"
         >
           Bangladesh
