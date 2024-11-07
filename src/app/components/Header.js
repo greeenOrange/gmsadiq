@@ -120,12 +120,14 @@ const Header = () => {
           </Link>
         </div>
         <div className="left_menu_items lg:flex lg:flex-1 lg:justify-end justify-space-between">
-          <button
-            type="button"
+          <a
+            href="https://drive.google.com/file/d/19Agsys9_88oqC0QAs9FO89cjDpX_QMZ0/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden lg:inline-block appearance-none bg-transparent bg:text-white main_btn me-10"
           >
             Download Resume
-          </button>
+          </a>
           <ThemeToggle />
         </div>
       </motion.nav>
@@ -135,7 +137,8 @@ const Header = () => {
           <div className="fixed inset-0 z-10" />
           <div
             className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 ${
-                theme === "light"? "bg-white shadow-md py-2"
+              theme === "light"
+                ? "bg-white shadow-md py-2"
                 : "dark:bg-slate-800"
             }`}
           >
@@ -172,12 +175,14 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="py-6">
-                  <button
-                    type="button"
-                    className="ppearance-none bg-transparent bg:text-white main_btn me-10 main_btn"
+                  <a
+                    href="https://drive.google.com/file/d/19Agsys9_88oqC0QAs9FO89cjDpX_QMZ0/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden lg:inline-block appearance-none bg-transparent bg:text-white main_btn me-10"
                   >
                     Download Resume
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

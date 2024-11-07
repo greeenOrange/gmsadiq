@@ -13,7 +13,7 @@ const ThemeToggle = () => {
     <motion.button
     className={`${
       theme === 'light' ? 'bg-gray-200 text-black' : 'bg-gray-800 text-white'
-    } px-6 rounded`}
+    } lg:px-6 rounded`}
     onClick={toggleTheme}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
